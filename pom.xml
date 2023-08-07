@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>top.emanjusaka</groupId>
+    <artifactId>E-IM-Server</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.10</version>
+        <relativePath/>
+    </parent>
+    <modules>
+        <module>im-agreement</module>
+        <module>im-common</module>
+        <module>im-socket</module>
+        <module>im-service</module>
+        <module>im-server</module>
+        <module>im-message-store</module>
+    </modules>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netty_version>4.1.86.Final</netty_version>
+        <hutool-core.version>5.8.15</hutool-core.version>
+        <hutool-bom.version>5.8.11</hutool-bom.version>
+        <fastjson2.version>2.0.33</fastjson2.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <redisson.version>3.22.1</redisson.version>
+        <amqp-client.version>5.18.0</amqp-client.version>
+        <zkclient.version>0.1</zkclient.version>
+        <mybatis-plus-boot-starter.version>3.5.3.1</mybatis-plus-boot-starter.version>
+        <httpclient.version>4.5.9</httpclient.version>
+        <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
+        <mybatisplus-plus.version>1.7.4-RELEASE</mybatisplus-plus.version>
+        <mysql-connector-j.version>8.1.0</mysql-connector-j.version>
+        <feign.version>8.18.0</feign.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- Netty 4.1.36 -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <!--            yaml-->
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
+            </dependency>
+            <!--            redisson-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${amqp-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jeffreyning</groupId>
+                <artifactId>mybatisplus-plus</artifactId>
+                <version>${mybatisplus-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-core</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-jackson</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+</project>
